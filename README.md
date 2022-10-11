@@ -1,4 +1,14 @@
 # Smart-Cashier-Using-YOLOv4
+final.py = model YOLOv4 yang siap dipakai.
+cara menjalankannya adalah buka anaconda prompt anda, kemudian ketik sintaks berikut :
+
+cd (lokasi model berada)
+python final.py --stream webcam --use_gpu
+catatan : jika tidak ingin menggunakan gpu/belum menginstall library opencv CUDA, maka sintaks --use_gpu dapat dihapus
+
+rotate2.py = digunakan untuk augmentasi gambar dengan merotate gambar yang sudah dilakukan labelling
+
+zoom out.py = digunankan untuk augmentasi gambar dengan melakukan zoom out pada gambar  yang sudah dilakukan labelling
 
 # Data Preparing and processing
 Untuk mendapatkan data untuk mendeteksi gambar, saya merekam produk di supermarket sehingga data dapat bervariasi (dalam 1 frame video bisa terdapat 1 objek atau lebih)
@@ -14,7 +24,7 @@ augmentasi yang saya lakukan adalah memutar gambar dan melakukan zoom out dari g
 https://github.com/usmanr149/Yolo_bbox_manipulation
 
 # Persiapan membuat model YOLOv4
-Menginstall CUDA untuk meningkatkan FPS yang didapatkan saat menjalankan program, dengan spesifikasi laptop intel I7-9750H dengan graphic card Nvidia geforce GTX 1650 didapatkan data ~25fps. jika hanya menggunakan CPU didapatkan 3-5 FPS
+Menginstall library opencv yang support CUDA untuk meningkatkan FPS yang didapatkan saat menjalankan program, dengan spesifikasi laptop intel I7-9750H dengan graphic card Nvidia geforce GTX 1650 didapatkan data ~25fps. jika hanya menggunakan CPU didapatkan 3-5 FPS
 
 cara untuk menginstall CUDA dapat dilihat pada document yang bernama : cara menginstall open cv cuda
 
@@ -27,3 +37,4 @@ Untuk mengetahui jarak benda ke kamera, saya menggunakan rumus yang dibuat oleh 
 
 https://github.com/paul-pias/Object-Detection-and-Distance-Measurement
 
+catatan : anda mungkin perlu merubah threshold jarak untuk program dapat mengetahui apakah barang diambil atau tidak
