@@ -1,4 +1,7 @@
 # Smart-Cashier-Using-YOLOv4
+
+Watch Smart_cashier demo.mkv for video demo.
+
 final.py = model YOLOv4 yang siap dipakai.
 cara menjalankannya adalah buka anaconda prompt anda, kemudian ketik sintaks berikut :
 
